@@ -1,0 +1,59 @@
+/* Menggunakan font Inter untuk seluruh halaman */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/image.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(5px);
+}
+
+/* Tracking Section Styling */
+.tracking-section {
+  margin-top: -80px;
+  z-index: 10;
+  position: relative;
+}
+.tracking-card {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Alur Pelaporan Section Styling */
+.alur-icon {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.btn-danger {
+  padding: 0.8rem 2rem;
+}
