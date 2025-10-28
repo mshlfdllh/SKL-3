@@ -57,3 +57,125 @@ body {
 .btn-danger {
   padding: 0.8rem 2rem;
 }
+
+/* Alur Pelaporan - Enhanced */
+.alur-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.alur-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.alur-badge {
+  width: 80px;
+  height: 80px;
+}
+
+/* Garis penghubung horizontal (desktop) */
+.alur-line {
+  position: absolute;
+  top: 110px;
+  left: 15%;
+  right: 15%;
+  height: 4px;
+  background: linear-gradient(to right, #0d6efd, #ffc107, #0dcaf0, #198754);
+  z-index: 0;
+}
+
+/* Garis penghubung vertikal (mobile) */
+.alur-line-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(to bottom, #0d6efd, #ffc107, #0dcaf0, #198754);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.alur-steps {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsif: sembunyikan garis vertikal di desktop */
+@media (min-width: 768px) {
+  .alur-line-vertical {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .alur-line {
+    display: none;
+  }
+  .alur-item {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Hero Sublinks: Lihat Cara Lapor & FAQ === */
+.hero-sublinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.hero-sublink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+}
+
+.hero-sublink:hover,
+.hero-sublink:focus {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  outline: none;
+}
+
+.hero-sublink:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* FAQ Section Styling */
+#faq .accordion-button {
+  font-weight: 600;
+  color: #212529;
+  transition: background-color 0.2s ease;
+}
+#faq .accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+  box-shadow: none;
+}
+#faq .accordion-button:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+#faq .accordion-body {
+  color: #495057;
+  line-height: 1.6;
+}
